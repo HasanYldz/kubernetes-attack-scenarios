@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scenario-2-server-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scenario-2-server
+  template:
+    metadata:
+      labels:
+        app: scenario-2-server
+    spec:
+      containers:
+      - name: scenario-2-server
+        image: tanersarptonay/scenario-2-server:1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 4242
+
