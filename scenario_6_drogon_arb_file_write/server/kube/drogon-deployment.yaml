@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drogon-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: drogon
+  template:
+    metadata:
+      labels:
+        app: drogon
+    spec:
+      containers:
+      - name: drogon
+        image: tanersarptonay/drogon:1.0.0
+        ports:
+
