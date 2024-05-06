@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: struts2-s2-053-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: struts2-s2-053
+  template:
+    metadata:
+      labels:
+        app: struts2-s2-053
+    spec:
+      containers:
+      - name: struts2-s2-053
+        image: tanersarptonay/struts2-kubectl:1.0.0
+        ports:
+        - containerPort: 8080
+
