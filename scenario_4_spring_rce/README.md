@@ -22,6 +22,10 @@ Used PoCs:
 3- Then with this knowledge attacker runs the exploit.py, `python exploit.py --ip <ip from injection> --port <port from injection>` \
 4- Attacker has connected a pseudo reverse shell. \
 
+### Demo
+[scenario-4.webm](https://github.com/HasanYldz/kubernetes-attack-scenarios/assets/56763025/e9540424-23bd-41c1-8fcc-75b97f8084df)
+
+
 
 
 
