@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: config-pv
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/home/taner/Desktop/DERS/8. Dönem/Security/term-project/kubernetes-attack-scenarios/scenario_6_drogon_arb_file_write/server/app"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: config-pvc
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+

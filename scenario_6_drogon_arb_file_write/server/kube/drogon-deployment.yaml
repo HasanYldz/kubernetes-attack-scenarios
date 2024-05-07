@@ -16,4 +16,12 @@ spec:
       - name: drogon
         image: tanersarptonay/drogon:1.0.0
         ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: config-volume
+          mountPath: /app
+      volumes:
+      - name: config-volume
+        persistentVolumeClaim:
+          claimName: config-pvc
 

@@ -12,4 +12,4 @@ Used PoCs:
 5- Forward port `kubectl port-forward pods/struts.... 8080:8080` \
 6- Run poc.py `python poc.py` \
 7- poc.py opens a pseudo reverse shell
-8- Because the pod is in the apps api group and can view and delete deployments the attacker deletes the pod he/she is in it.
+8- Because the pod is in the apps api group and can view and delete deployments the attacker deletes the pod he/she is in it with `kubectl delete deployment <name-of-deployment>`

