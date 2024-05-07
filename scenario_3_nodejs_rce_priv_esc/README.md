@@ -23,3 +23,7 @@ Used PoCs:
 7- Get secrets (the SSH Key) with Kubernetes API calls `curl --insecure --header "Authorization: Bearer $TOKEN" https://kubernetes.default.svc/api/v1/namespaces/default/secrets`
 8- Attacker now has the ssh-privatekey
 9- Attacker finds the repository url (which is https://github.com/exploit-me-co/exploit-this) in server.js, now they can access the repository with full access.
+
+## Demo
+https://github.com/HasanYldz/kubernetes-attack-scenarios/assets/56763025/8e12be1a-de1a-4394-8157-72a7854a6245
+
