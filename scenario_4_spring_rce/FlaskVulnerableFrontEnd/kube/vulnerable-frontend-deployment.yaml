@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vulnerable-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vulnerable-frontend
+  template:
+    metadata:
+      labels:
+        app: vulnerable-frontend
+    spec:
+      containers:
+      - name: vulnerable-frontend
+        image: tanersarptonay/vulnerable-frontend:latest
+        ports:
+        - containerPort: 5000

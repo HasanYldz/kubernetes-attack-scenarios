@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springbreak-vulnerable-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springbreak-vulnerable-app
+  template:
+    metadata:
+      labels:
+        app: springbreak-vulnerable-app
+    spec:
+      containers:
+      - name: springbreak-vulnerable-app
+        image: tanersarptonay/springbreakvulnerableapp:latest
+        ports:
+        - containerPort: 8090
+
