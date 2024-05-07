@@ -19,5 +19,9 @@ Used PoCs:
 7- Attacker runs `mysql -h mysql-service -u user -p` then inputs the password to access the database \
 8- Even though the output of Mysql is not seen, input is sent to the container. With this, the attacker can delete the person table with ease.
 
+### Demo
+[scenario-2.webm](https://github.com/HasanYldz/kubernetes-attack-scenarios/assets/56763025/c3188a89-8977-418b-aac8-c46c4197edbb)
+
+
 ### Kubernetes
 Check https://learnk8s.io/deploying-nodejs-kubernetes for deployment tutorial
