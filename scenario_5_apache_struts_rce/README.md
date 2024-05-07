@@ -13,3 +13,6 @@ Used PoCs:
 6- Run poc.py `python poc.py` \
 7- poc.py opens a pseudo reverse shell
 8- Because the pod is in the apps api group and can view and delete deployments the attacker deletes the pod he/she is in it with `kubectl delete deployment <name-of-deployment>`
+
+### Demo
+[scenario-5.webm](https://github.com/HasanYldz/kubernetes-attack-scenarios/assets/56763025/a9b37b72-beed-4a47-8288-ae504b6a8e4d)
