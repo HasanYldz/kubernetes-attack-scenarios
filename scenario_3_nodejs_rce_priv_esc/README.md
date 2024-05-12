@@ -8,6 +8,11 @@ Used PoCs:
 * https://packetstormsecurity.com/files/161356/Node.JS-Remote-Code-Execution.html
 * https://opsecx.com/index.php/2017/02/08/exploiting-node-js-deserialization-bug-for-remote-code-execution/
 
+### Tactics Used
+Initial Access: Application vulnerability \
+Execution: Application exploit (RCE), Bash or cmd inside container \
+Credential Access: List Kubernetes secrets
+
 ### Steps to Reproduce
 
 1- `minikube start` \

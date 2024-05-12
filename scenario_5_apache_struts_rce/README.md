@@ -1,7 +1,12 @@
 ## CVE-2017-12611
+https://nvd.nist.gov/vuln/detail/CVE-2017-12611 \
 Target Application: Apache Struts 2 \
 Used PoCs: 
 * https://github.com/Medicean/VulApps/tree/master/s/struts2/s2-053
+
+### Tactics Used
+Initial Access: Application vulnerability \
+Execution: Application exploit (RCE)
 
 ### Steps to Reproduce
 

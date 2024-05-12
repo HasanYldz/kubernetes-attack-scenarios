@@ -1,7 +1,3 @@
 ## Kubernetes Attack Scenarios
 
-Write an introduction
-
-Check https://www.metasploit.com/
-
-Find DoS, RCE and CSRF exploits
+We created 6 successful scenarios with 4 different CVEs.

@@ -3,6 +3,9 @@ Target Application: Drogon \
 Used PoCs: 
 * https://security.snyk.io/vuln/SNYK-UNMANAGED-DROGONFRAMEWORKDROGON-2407243
 
+### Tactics Used
+Initial Access: Application vulnerability 
+
 ### Steps to Reproduce
 
 1- `minikube start` \
