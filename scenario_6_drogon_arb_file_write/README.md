@@ -5,6 +5,7 @@ Used PoCs:
 
 ### Tactics Used
 Initial Access: Application vulnerability 
+Impact: Denial of service
 
 ### Steps to Reproduce
 
